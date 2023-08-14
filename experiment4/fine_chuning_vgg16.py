@@ -57,6 +57,17 @@ def split_files(dir_path):
     return dir_path
 
 
+def conclete(train_dataset_size):
+    '''
+    conclete(20)
+    >>>14, 4, 2
+    '''
+    train_size=int(train_dataset_size*.7)
+    val_size=int(train_dataset_size*.2)
+    test_size=int(train_dataset_size-train_size-val_size)
+    return train_size, val_size, test_size
+
+
 def train_data_split(train_dir):
     
     train_dir_path = split_files(train_dir)
@@ -67,9 +78,7 @@ def train_data_split(train_dir):
 
     # split data
     train_dataset_size=int(len(train_data))
-    train_size=int(train_dataset_size*.7)
-    val_size=int(train_dataset_size*.2)
-    test_size=int(train_dataset_size-train_size-val_size)
+    train_size, val_size, test_size = compile(train_dataset_size)
 
     print("train dataset size: {}\ntrain size: {}\nval size: {}\ntest size:{}".format(train_dataset_size,train_size,val_size,test_size))
 
