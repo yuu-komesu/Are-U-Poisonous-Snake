@@ -38,7 +38,7 @@ git clone https://gitlab.ie.u-ryukyu.ac.jp/e215742/datasets.git
 │   └── snake-dataset-indian
 ├── requirements.txt
 └── usemodel
-│   └── usemodel.ipynb
+    └── usemodel.ipynb
     └── snake-dataset-indian
 ```
 
